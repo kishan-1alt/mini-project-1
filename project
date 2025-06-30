@@ -1,0 +1,31 @@
+create database ProductDB;
+use ProductDB;
+create table products(P_ID int primary key,Pname varchar(50),Price int,Quantity int ,Profit int, Discount int,DateOfPurchase varchar(50));
+insert into products values(1,"Keyboard",1500,15,5,10,"2018-05-21");
+insert into products values(2,"Mouse",550,10,3,5,"2018-11-19");
+insert into products values(3,"Monitor",12000,5,8,12,"2019-07-15"); 
+insert into products values(4,"RAM",2500,8,7,10,"2018-12-10");
+insert into products values(5,"SSD",4000,12,15,8,"2020-02-20");
+insert into products values(6,"Graphics Card",20000,3,NULL,10,"2021-05-10");
+insert into products values(7,"Power Supply",3500,7,12,5,"2019-03-22");
+select * from products;
+select P_ID,Pname,DateOfPurchase from products; 
+select * from products where price <3000;
+select * from products where DateOfPurchase <"2019-01-01";
+select Profit,Discount from products where DateOfPurchase >"2018-06-25";
+select * from products where profit is NULL;
+select P_ID,Pname from products where profit is not NULL;
+select distinct price from products;
+select * from products where profit >10 and Discount <15;
+ select Pname,Price from products where P_ID <>3;
+ select Pname,Quantity from products where price <>3000 or profit  =10;
+select * from products where year (DateOfPurchase) =2018;
+select * from products where price >2000 and <4000;
+select * from P_ID,Pname,Quantity where Quantity <20 and >10;
+select * from products like Pname "&";
+select * from Pname, Quantity like Pname"%";
+select * from Profit,DateOfPurchase like Pname"%";
+select * from products where price >2000 and Pname "%"
+select * from Pname, profit, discount where Pname "%"
+select * from prodicts where price
+select * from 
